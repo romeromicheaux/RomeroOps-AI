@@ -147,3 +147,8 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# RomeroOps-AI local backups and test files
+app.js.backup*
+app.js.pre-s3-backup
+s3-test.js
