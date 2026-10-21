@@ -1,4 +1,7 @@
 # RomeroOps-AI
+## Live Interactive Architecture
+
+[🚀 Explore the RomeroOps-AI Interactive Architecture](https://romeromicheaux.github.io/RomeroOps-AI/architecture/)
 
 RomeroOps-AI is a Slack-based AI operations assistant built with Node.js and Amazon Bedrock. It allows a user to submit a prompt through a Slack slash command and receive an AI-generated response directly inside Slack.
 
