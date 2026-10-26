@@ -1,3 +1,4 @@
+const { formatIncident } = require("./incident-formatter");
 const { App } = require("@slack/bolt");
 
 const {
@@ -137,20 +138,7 @@ async function startRomeroOps() {
         ];
 
         incidents.slice(0, 5).forEach((incident, index) => {
-          const score = Number(incident.score);
-          const relevance = Number.isFinite(score)
-            ? `${(score * 100).toFixed(1)}%`
-            : "Not available";
-
-          const analysis = String(incident.text || "")
-            .replace(/^\],\s*/, "")
-            .slice(0, 450);
-
-          report.push(
-            `*Match ${index + 1}* — Relevance: ${relevance}`,
-            analysis || "No incident details available.",
-            ""
-          );
+          report.push(formatIncident(incident, index));
         });
 
         await respond({
